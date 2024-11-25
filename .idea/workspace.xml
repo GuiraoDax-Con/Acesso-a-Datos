@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77b0809d-a6f8-49e3-8fd0-0ffb789ff98a" name="Changes" comment="6º">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="77b0809d-a6f8-49e3-8fd0-0ffb789ff98a" name="Changes" comment="7.1º">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +54,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
+    "settings.editor.selected.configurable": "fileTemplates",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -85,7 +85,7 @@
       <workItem from="1732226296845" duration="2060000" />
       <workItem from="1732289984531" duration="1029000" />
       <workItem from="1732464261758" duration="790000" />
-      <workItem from="1732534975197" duration="1726000" />
+      <workItem from="1732534975197" duration="2754000" />
     </task>
     <task id="LOCAL-00001" summary="2º">
       <option name="closed" value="true" />
@@ -135,7 +135,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732535381970</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="7º">
+      <option name="closed" value="true" />
+      <created>1732536783104</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732536783104</updated>
+    </task>
+    <task id="LOCAL-00008" summary="7.1º">
+      <option name="closed" value="true" />
+      <created>1732537381631</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732537381631</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,9 +172,10 @@
     <MESSAGE value="2º" />
     <MESSAGE value="3º" />
     <MESSAGE value="5º" />
-    <MESSAGE value="7º" />
     <MESSAGE value="6º" />
-    <option name="LAST_COMMIT_MESSAGE" value="6º" />
+    <MESSAGE value="7º" />
+    <MESSAGE value="7.1º" />
+    <option name="LAST_COMMIT_MESSAGE" value="7.1º" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
