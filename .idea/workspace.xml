@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77b0809d-a6f8-49e3-8fd0-0ffb789ff98a" name="Changes" comment="5º">
+    <list default="true" id="77b0809d-a6f8-49e3-8fd0-0ffb789ff98a" name="Changes" comment="6º">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +14,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -35,22 +42,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Guirap/Documents/GitHub/github-key&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Subversion.SSH&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Guirap/Documents/GitHub/github-key",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -63,6 +70,7 @@
   <component name="SvnConfiguration">
     <configuration>C:\Users\Guirap\AppData\Roaming\Subversion</configuration>
     <option name="sshConnectionType" value="PRIVATE_KEY" />
+    <option name="sshExecutablePath" value="git@github.com:GuiraoDax-Con/Acesso-a-Datos.git" />
     <option name="sshUserName" value="Guirao" />
     <option name="sshPrivateKeyPath" value="C:\Users\Guirap\Documents\GitHub\github-key" />
   </component>
@@ -77,6 +85,7 @@
       <workItem from="1732226296845" duration="2060000" />
       <workItem from="1732289984531" duration="1029000" />
       <workItem from="1732464261758" duration="790000" />
+      <workItem from="1732534975197" duration="1726000" />
     </task>
     <task id="LOCAL-00001" summary="2º">
       <option name="closed" value="true" />
@@ -110,7 +119,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732229419099</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="6º">
+      <option name="closed" value="true" />
+      <created>1732535092253</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732535092253</updated>
+    </task>
+    <task id="LOCAL-00006" summary="6º">
+      <option name="closed" value="true" />
+      <created>1732535381970</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732535381970</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,7 +156,9 @@
     <MESSAGE value="2º" />
     <MESSAGE value="3º" />
     <MESSAGE value="5º" />
-    <option name="LAST_COMMIT_MESSAGE" value="5º" />
+    <MESSAGE value="7º" />
+    <MESSAGE value="6º" />
+    <option name="LAST_COMMIT_MESSAGE" value="6º" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
