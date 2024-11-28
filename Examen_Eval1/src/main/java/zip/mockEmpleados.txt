@@ -1,0 +1,144 @@
+    public List<Empleado> getMockEmpleado() {
+        List<Empleado> empleados = new ArrayList<Empleado>();
+        
+        Empleado e = new Empleado();
+        e.setId(7369);
+        e.setNombre("Juan Sánchez");
+        e.setOficio("Empleado");
+        e.setFecha_alt("2012-12-17");
+        e.setSalario(1040);
+        e.setDepartamento(20);
+        empleados.add(e);
+
+        e = new Empleado();
+        e.setId(7499);
+        e.setNombre("Sandra Arroyo");
+        e.setOficio("Vendedor");
+        e.setFecha_alt("2020-02-20");
+        e.setSalario(1500);
+        e.setComision(390);
+        e.setDepartamento(30);
+        empleados.add(e);
+
+        e = new Empleado();
+        e.setId(7521);
+        e.setNombre("Miguel Sala");
+        e.setOficio("Gerente");
+        e.setFecha_alt("2020-02-22");
+        e.setSalario(1625);
+        e.setComision(650);
+        e.setDepartamento(30);
+        empleados.add(e);
+
+        e = new Empleado();
+        e.setId(7566);
+        e.setNombre("Cristina Jiménez");
+        e.setOficio("Director");
+        e.setFecha_alt("2000-04-02");
+        e.setSalario(2900);
+        e.setDepartamento(20);
+        empleados.add(e);
+
+        e = new Empleado();
+        e.setId(7654);
+        e.setNombre("Jorge Martín");
+        e.setOficio("Vendedor");
+        e.setFecha_alt("2010-09-29");
+        e.setSalario(1600);
+        e.setComision(1020);
+        e.setDepartamento(30);
+        empleados.add(e);
+
+        e = new Empleado();
+        e.setId(7698);
+        e.setNombre("Sonia Negro");
+        e.setOficio("Directora");
+        e.setFecha_alt("2021-05-01");
+        e.setSalario(3005);
+        e.setDepartamento(30);
+        empleados.add(e);
+
+        e = new Empleado();
+        e.setId(7782);
+        e.setNombre("Helena Cerezo");
+        e.setOficio("Director");
+        e.setFecha_alt("2022-06-09");
+        e.setSalario(2885);
+        e.setDepartamento(10);
+        empleados.add(e);
+
+        e = new Empleado();
+        e.setId(7788);
+        e.setNombre("Carlos Gil");
+        e.setOficio("Analista");
+        e.setFecha_alt("2020-11-09");
+        e.setSalario(3000);
+        e.setDepartamento(20);
+        empleados.add(e);
+
+        e = new Empleado();
+        e.setId(7839);
+        e.setNombre("Pedro Rey");
+        e.setOficio("Presidente");
+        e.setFecha_alt("2021-11-17");
+        e.setSalario(4100);
+        e.setDepartamento(10);
+        empleados.add(e);
+
+        e = new Empleado();
+        e.setId(7844);
+        e.setNombre("Luisa Tovar");
+        e.setOficio("Vendedor");
+        e.setFecha_alt("2018-09-08");
+        e.setSalario(1350);
+        e.setComision(0);
+        e.setDepartamento(30);
+        empleados.add(e);
+
+        e = new Empleado();
+        e.setId(7876);
+        e.setNombre("Pepe Alonso");
+        e.setOficio("Gerente");
+        e.setFecha_alt("2020-09-23");
+        e.setSalario(1430);
+        e.setDepartamento(20);
+        empleados.add(e);
+
+        e = new Empleado();
+        e.setId(7900);
+        e.setNombre("Cristina Jimeno");
+        e.setOficio("Empleado");
+        e.setFecha_alt("2013-12-03");
+        e.setSalario(1335);
+        e.setDepartamento(30);
+        empleados.add(e);
+
+        e = new Empleado();
+        e.setId(7903);
+        e.setNombre("Rosario Olmos");
+        e.setOficio("Gerente");
+        e.setFecha_alt("2019-12-03");
+        e.setSalario(1335);
+        e.setDepartamento(10);
+        empleados.add(e);
+ 
+        e = new Empleado();
+        e.setId(7902);
+        e.setNombre("Lola Fernández");
+        e.setOficio("Analista");
+        e.setFecha_alt("2021-12-03");
+        e.setSalario(3000);
+        e.setDepartamento(20);
+        empleados.add(e);
+
+        e = new Empleado();
+        e.setId(7934);
+        e.setNombre("Paco Muñoz");
+        e.setOficio("Director");
+        e.setFecha_alt("2005-01-23");
+        e.setSalario(1690);
+        e.setDepartamento(40);
+        empleados.add(e);
+    
+        return empleados;
+    }
