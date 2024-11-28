@@ -29,19 +29,21 @@ public class Menu {
                     directorio.mostrarDirectorios();
                     break;
                 case 2:
-
+                    directorio.cambiarDirectorio();
                     break;
                 case 3:
-
+                    archivo.crearArchivo();
                     break;
                 case 4:
-
+                    archivo.mostrarArchivoEspecifico();
                     break;
                 case 5:
-
+                    System.out.print("Ingrese la línea a añadir: ");
+                    String linea = pd.textoNoVacio();
+                    archivo.anyadirLinea(linea);
                     break;
                 case 6:
-
+                    archivo.eliminarArchivo();
                     break;
                 case 7:
                     System.out.println("Saliendo...");
