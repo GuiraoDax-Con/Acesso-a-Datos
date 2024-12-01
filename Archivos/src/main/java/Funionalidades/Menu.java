@@ -13,7 +13,7 @@ public class Menu {
 
     public void menu() {
         while (true) {
-            System.out.println(" --- Menu ---" +
+            System.out.println("\n --- Menu ---" +
                     "\n1. Mostrar directorios de la carpeta actual" +
                     "\n2. Cambiar a un subdirectorio o al directorio padre" +
                     "\n3. Crear un nuevo archivo de texto en la carpeta actual" +

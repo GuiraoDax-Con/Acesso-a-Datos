@@ -9,70 +9,50 @@ import java.text.SimpleDateFormat;
  */
 public class Directorio {
 	Pedir pd = new Pedir();
-	String directorioActual = System.getProperty("user.dir");
+	Archivo arch;
+	String directorioActual;
 
 
+	// CONSTRUCTOR
 	public Directorio() {
+		this.arch = new Archivo();
+		this.directorioActual = arch.getDirectorioActual();
 	}
 
+
+	// MÉTODOS
 	public void mostrarDirectorios() {
 		// Obtener el directorio actual
 		File directorio = new File(directorioActual);
 
 		if (directorio.exists() && directorio.isDirectory()) {
-			// Fecha de última modificación
-			long ultimaModificacion = directorio.lastModified();
-			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-			String fecha = sdf.format(ultimaModificacion);
+			// Mostrar información del directorio actual
+			imprimirInformacion(directorio, 0);
 
-			// Tamaño del directorio
-			long tamanyoBytes = calcularTamaño(directorio);
-			double tamanyoKilobytes = tamanyoBytes / 1024;
-
-			// Mostrar resultados
-			System.out.println("Directorio: " + directorio.getAbsolutePath());
-			System.out.println("Última modificación: " + fecha);
-			System.out.printf("Tamaño total: %.2f KB%n", tamanyoKilobytes);
+			// Obtener subdirectorios directos
+			File[] archivos = directorio.listFiles();
+			if (archivos != null) {
+				for (File archivo : archivos) {
+					if (archivo.isDirectory()) {
+						imprimirInformacion(archivo, 1);
+					}
+				}
+			}
 		} else {
 			System.out.println("El directorio no existe o no es un directorio válido.");
 		}
 	}
 
-	/**
-	 * Calcula el tamaño total de un directorio, incluyendo los tamaños de todos
-	 * los archivos y subdirectorios contenidos en él.
-	 *
-	 * @param directorio El directorio cuyo tamaño se desea calcular.
-	 * @return El tamaño total del directorio en bytes.
-	 */
-	private static long calcularTamaño(File directorio) {
-		// Variable para acumular el tamaño total en bytes
-		long tamanyo = 0;
+	private void imprimirInformacion(File archivo, int nivel) {
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		String fechaModificacion = sdf.format(archivo.lastModified());
+		long tamanoKB = archivo.length() / 1024;
 
-		// Verificar si el archivo pasado es un directorio
-		if (directorio.isDirectory()) {
-			// Obtener la lista de archivos y subdirectorios dentro del directorio
-			File[] archivos = directorio.listFiles();
+		String formato = "Nombre: %-15s Fecha Ultima Modificación: %-15s Tamaño: %d KB";
+		String salida = String.format(formato, archivo.getName(), fechaModificacion, tamanoKB);
 
-			// Asegurarse de que no haya errores al listar el contenido del directorio
-			if (archivos != null) {
-				// Iterar por cada archivo o subdirectorio
-				for (File archivo : archivos) {
-					if (archivo.isFile()) {
-						// Si es un archivo, sumar su tamaño
-						tamanyo += archivo.length();
-					} else {
-						// Si es un subdirectorio, calcular su tamaño recursivamente
-						tamanyo += calcularTamaño(archivo);
-					}
-				}
-			}
-		}
-
-		// Devolver el tamaño total en bytes
-		return tamanyo;
+		System.out.println(salida);
 	}
-
 
 	public void cambiarDirectorio() {
 		System.out.print("Ingrese el nombre del subdirectorio o '..' para ir al directorio padre: ");
@@ -91,11 +71,11 @@ public class Directorio {
 
 		if (nuevoDirectorio.exists() && nuevoDirectorio.isDirectory()) {
 			directorioActual = nuevoDirectorio.getAbsolutePath();
+			arch.setDirectorioActual(directorioActual);
 			System.out.println("Directorio cambiado a: " + directorioActual);
 		} else {
 			System.out.println("El subdirectorio no existe.");
 		}
 	}
-
 
 }

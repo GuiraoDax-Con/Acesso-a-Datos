@@ -13,20 +13,29 @@ public class Archivo {
 	 * private String userHome = System.getProperty("user.home"); // Directorio del usuario
 	 * private String pathDirectorio = userHome + "/Documentos/Programa"; // Directorio del programa
 	 */
-	private String directorioActual = System.getProperty("user.dir"); // Directorio actual del usuario
-	private String pathArchivo = directorioActual + "/nuevoArchivo.txt"; // Ruta del archivo
+	private String directorioActual; // Directorio actual del usuario
+	private String pathArchivo; // Ruta del archivo
 	Pedir pd = new Pedir();
 
 
-	public void crearArchivo() {
-		System.out.println("Creando archivo...");
-		crearDirectorio();
+	// CONSTRUCTOR
+	public Archivo() {
+		this.directorioActual = System.getProperty("user.dir");
+	}
 
-		File archivo = new File(pathArchivo);
+
+	// MÉTODOS
+	public void crearArchivo() {
+		System.out.print("Nombre del nuevo archivo: ");
+		String nombreArchivo = pd.textoNoVacio();
+		setPathArchivo(nombreArchivo);
+
+
+		File archivo = new File(getPathArchivo());
 		if (!archivo.exists()) {
 			try {
 				if (archivo.createNewFile()) {
-					System.out.println("Archivo creado: " + pathArchivo);
+					System.out.println("Archivo creado: " + getPathArchivo());
 				} else {
 					System.out.println("El archivo ya existe.");
 				}
@@ -37,27 +46,11 @@ public class Archivo {
 		}
 	}
 
-	public void mostrarArchivo() {
-		System.out.println("Mostrando archivo...");
-
-		File archivo = new File(pathArchivo);
-		if (archivo.exists() && archivo.isFile()) {
-			try {
-				String contenido = new String(Files.readAllBytes(Paths.get(pathArchivo)));
-				System.out.println("Contenido del archivo:\n" + contenido);
-
-			} catch (IOException e) {
-				System.out.println("Error al leer el archivo.");
-			}
-		} else {
-			System.out.println("Archivo no encontrado.");
-		}
-	}
 
 	public void mostrarArchivoEspecifico() {
 		System.out.print("Ingrese el nombre del archivo a mostrar: ");
 		String nombreArchivo = pd.textoNoVacio();
-		String pathArchivoEspecifico = directorioActual + File.separator + nombreArchivo;
+		String pathArchivoEspecifico = getDirectorioActual() + File.separator + nombreArchivo;
 
 		File archivo = new File(pathArchivoEspecifico);
 		if (archivo.exists() && archivo.isFile()) {
@@ -100,7 +93,7 @@ public class Archivo {
 	public void anyadirLinea(String lineaAnyadir) {
 		System.out.println("Añadiendo línea...");
 
-		File archivo = new File(pathArchivo);
+		File archivo = new File(getPathArchivo());
 		if (archivo.exists() && archivo.isFile()) {
 			try (FileWriter writer = new FileWriter(archivo, StandardCharsets.UTF_8, true)){
 				writer.write(lineaAnyadir + System.lineSeparator());
@@ -117,12 +110,14 @@ public class Archivo {
 	}
 
 	public void eliminarArchivo() {
-		System.out.println("Eliminando archivo...");
+		System.out.print("Ingrese el nombre del archivo a eliminar: ");
+		String nombreArchivo = pd.textoNoVacio();
+		String pathArchivoEspecifico = getDirectorioActual() + File.separator + nombreArchivo;
 
-		File archivo = new File(pathArchivo);
+		File archivo = new File(pathArchivoEspecifico);
 		if (archivo.exists() && archivo.isFile()) {
 			if (archivo.delete()) {
-				System.out.println("Archivo eliminado: " + pathArchivo);
+				System.out.println("Archivo eliminado: " + pathArchivoEspecifico);
 			} else {
 				System.out.println("Error al eliminar el archivo.");
 			}
@@ -132,12 +127,19 @@ public class Archivo {
 	}
 
 
-	private void crearDirectorio() {
-		//File directorio = new File(pathDirectorio);
-		File directorio = new File(directorioActual);
-		if (!directorio.exists()) {
-			directorio.mkdirs();
-			System.out.println("Directorio creado: " + /* pathDirectorio */ directorioActual);
-		}
+
+
+	public String getDirectorioActual() {
+		return directorioActual;
+	}
+	public void setDirectorioActual(String directorioActual) {
+		this.directorioActual = directorioActual;
+	}
+
+	public String getPathArchivo() {
+		return pathArchivo;
+	}
+	public void setPathArchivo(String pathArchivo) {
+		this.pathArchivo = getDirectorioActual() + File.separator + pathArchivo;
 	}
 }
