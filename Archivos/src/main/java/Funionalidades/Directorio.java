@@ -4,8 +4,7 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 
 /**
- * @author Guirap
- * @date 25/11/2024
+ * Autor: Daniel Guirao Coronado
  */
 public class Directorio {
 	Pedir pd = new Pedir();

@@ -6,6 +6,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
+/**
+ * Autor: Daniel Guirao Coronado
+ */
 public class Menu {
     Pedir pd = new Pedir();
     Archivo archivo = new Archivo();

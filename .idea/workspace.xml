@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77b0809d-a6f8-49e3-8fd0-0ffb789ff98a" name="Changes" comment="7.1º">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archivos/src/main/java/Funionalidades/Archivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Archivos/src/main/java/Funionalidades/Archivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archivos/src/main/java/Funionalidades/Directorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Archivos/src/main/java/Funionalidades/Directorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archivos/src/main/java/Funionalidades/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Archivos/src/main/java/Funionalidades/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archivos/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Archivos/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,18 +56,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "fileTemplates",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>C:\Users\Guirap\AppData\Roaming\Subversion</configuration>

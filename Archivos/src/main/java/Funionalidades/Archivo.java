@@ -8,6 +8,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
+/**
+ * Autor: Daniel Guirao Coronado
+ */
 public class Archivo {
 	/*
 	 * private String userHome = System.getProperty("user.home"); // Directorio del usuario

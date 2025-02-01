@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Configuración de la base de datos -->
+		<property name="connection.url">jdbc:mysql://localhost:3306/baloncesto</property>
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">1234</property>
+
+		<!-- Dialecto de Hibernate -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+		<!-- Mostrar y formatear SQL -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+
+		<!-- Actualización automática de la base de datos -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<!-- Archivos de mapeo -->
+		<mapping class="Baloncesto.Data.Equipo"/>
+		<mapping class="Baloncesto.Data.Jugador"/>
+		<mapping class="Baloncesto.Data.Patrocinador"/>
+		<mapping class="Baloncesto.Data.Second.Encuentro"/>
+		<mapping class="Baloncesto.Data.Second.EncuentroId"/>
+		<mapping class="Baloncesto.Data.Second.Pabellon"/>
+
+	</session-factory>
+</hibernate-configuration>
