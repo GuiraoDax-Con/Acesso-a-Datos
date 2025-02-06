@@ -1,20 +1,19 @@
 package data.Models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 /**
  * Autor: Daniel Guirao Coronado
  */
-public class Persons {
+@Entity
+@Table(name="person")
+public class Person {
 	@Id
 	@Column(name = "id", nullable = false)
 	private int idPersons;
 
 	@Column(name = "first_name", nullable = false)
-	private String firistName;
+	private String firstName;
 
 	@Column(name = "last_name", nullable = false)
 	private String lastName;
@@ -22,28 +21,28 @@ public class Persons {
 
 	@ManyToOne
 	@JoinColumn(name = "house_id", nullable = true)
-	private House house;
+	private House houseId;
 
 
 	// Constructores
-	public Persons() {
+	public Person() {
 	}
-	public Persons(int idPersons, String firistName, String lastName, House house) {
+	public Person(int idPersons, String firistName, String lastName, House house) {
 		this.idPersons = idPersons;
-		this.firistName = firistName;
+		this.firstName = firistName;
 		this.lastName = lastName;
-		this.house = house;
+		this.houseId = house;
 	}
 
 
 	// toString
 	@Override
 	public String toString() {
-		return "Persons{" +
+		return "Person{" +
 				"idPersons=" + idPersons +
-				", firistName='" + firistName + '\'' +
+				", firistName='" + firstName + '\'' +
 				", lastName='" + lastName + '\'' +
-				", house=" + house +
+				", house=" + houseId +
 				'}';
 	}
 

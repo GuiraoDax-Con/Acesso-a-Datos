@@ -22,7 +22,7 @@
 		<mapping class="data.DAO.HibernateDao" />
 		<mapping class="data.Models.House" />
 		<mapping class="data.Models.House_Points" />
-		<mapping class="data.Models.Persons" />
+		<mapping class="data.Models.Person" />
 
 
 	</session-factory>

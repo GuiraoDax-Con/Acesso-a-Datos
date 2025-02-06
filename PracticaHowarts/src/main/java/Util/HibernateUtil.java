@@ -2,7 +2,7 @@ package Util;
 
 import data.Models.House;
 import data.Models.House_Points;
-import data.Models.Persons;
+import data.Models.Person;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -22,7 +22,7 @@ public class HibernateUtil {
 			// Inicializar las clases que se van a utilizar
 			configuration.addAnnotatedClass(House.class);
 			configuration.addAnnotatedClass(House_Points.class);
-			configuration.addAnnotatedClass(Persons.class);
+			configuration.addAnnotatedClass(Person.class);
 
 			// Cargar la configuración
 			configuration.configure();

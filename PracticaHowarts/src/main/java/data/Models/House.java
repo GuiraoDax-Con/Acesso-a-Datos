@@ -1,7 +1,5 @@
 package data.Models;
 
-import Persons;
-
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -10,7 +8,7 @@ import java.util.List;
  * Autor: Daniel Guirao Coronado
  */
 @Entity
-@Table(name="House")
+@Table(name="house")
 public class House {
 
 	@Id
@@ -20,16 +18,17 @@ public class House {
 	@Column(name="name", nullable = false)
 	private String name;
 
-	@Column(name="head_teacher", nullable = false)
-	private int head_teacher;
+	@OneToOne
+	@JoinColumn(name="head_teacher", unique = true, nullable = false)
+	private Person head_teacher;
 
-	@OneToMany(mappedBy = "house")
-	private List<Persons> persons;
+	@OneToMany(mappedBy = "house", cascade = CascadeType.ALL)
+	private List<Person> persons;
 
 	// Constructores
 	public House() {
 	}
-	public House(long id, String name, int head_teacher) {
+	public House(long id, String name, Person head_teacher) {
 		this.idHouse = id;
 		this.name = name;
 		this.head_teacher = head_teacher;
