@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77b0809d-a6f8-49e3-8fd0-0ffb789ff98a" name="Changes" comment="7.1º">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="77b0809d-a6f8-49e3-8fd0-0ffb789ff98a" name="Changes" comment="7.1º" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +46,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Daniel/Documents/2DAM/Acesso-a-Datos",
+    "last_opened_file_path": "C:/Users/Guirap/Documents/GitHub/2ºDAM/Acesso-a-Datos/PracticaHowarts",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -88,6 +86,7 @@
       <workItem from="1732534975197" duration="2754000" />
       <workItem from="1739817694054" duration="866000" />
       <workItem from="1739819836341" duration="57000" />
+      <workItem from="1739868628949" duration="57000" />
     </task>
     <task id="LOCAL-00001" summary="2º">
       <option name="closed" value="true" />

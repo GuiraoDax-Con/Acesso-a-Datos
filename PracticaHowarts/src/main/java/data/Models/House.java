@@ -35,6 +35,36 @@ public class House {
 	}
 
 
+	// Getters y Setters
+	public long getIdHouse() {
+		return idHouse;
+	}
+	public void setIdHouse(long idHouse) {
+		this.idHouse = idHouse;
+	}
+
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Person getHead_teacher() {
+		return head_teacher;
+	}
+	public void setHead_teacher(Person head_teacher) {
+		this.head_teacher = head_teacher;
+	}
+
+	public List<Person> getPersons() {
+		return persons;
+	}
+	public void setPersons(List<Person> persons) {
+		this.persons = persons;
+	}
+
+
 	// toString
 	@Override
 	public String toString() {
