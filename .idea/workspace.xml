@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77b0809d-a6f8-49e3-8fd0-0ffb789ff98a" name="Changes" comment="7.1º">
-      <change beforePath="$PROJECT_DIR$/Archivos/src/main/java/Funionalidades/Archivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Archivos/src/main/java/Funionalidades/Archivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos/src/main/java/Funionalidades/Directorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Archivos/src/main/java/Funionalidades/Directorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos/src/main/java/Funionalidades/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Archivos/src/main/java/Funionalidades/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Archivos/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +29,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:GuiraoDax-Con/Acesso-a-Datos.git&quot;,
+    &quot;url&quot;: &quot;git@github.com:/GuiraoDax-Con/Acesso-a-Datos.git&quot;,
     &quot;accountId&quot;: &quot;e3c30d06-b2f5-4e4a-b650-1b9d83968e4e&quot;
   }
 }</component>
@@ -49,8 +46,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Guirap/Documents/GitHub/github-key",
+    "last_opened_file_path": "C:/Users/Daniel/Documents/2DAM/Acesso-a-Datos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,6 +58,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>C:\Users\Guirap\AppData\Roaming\Subversion</configuration>
@@ -80,6 +86,8 @@
       <workItem from="1732289984531" duration="1029000" />
       <workItem from="1732464261758" duration="790000" />
       <workItem from="1732534975197" duration="2754000" />
+      <workItem from="1739817694054" duration="866000" />
+      <workItem from="1739819836341" duration="57000" />
     </task>
     <task id="LOCAL-00001" summary="2º">
       <option name="closed" value="true" />
