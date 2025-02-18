@@ -19,9 +19,9 @@
 		<property name="hibernate.hbm2ddl.auto">update</property>
 
 		<!-- Archivos de mapeo -->
-		<mapping class="data.DAO.HibernateDao" />
-		<mapping class="data.Models.House" />
-		<mapping class="data.Models.House_Points" />
-		<mapping class="data.Models.Person" />
+		<mapping class="Hibernate.HibernateDao" />
+		<mapping class="data.POJOS.House" />
+		<mapping class="data.POJOS.House_Points" />
+		<mapping class="data.POJOS.Person" />
 	</session-factory>
 </hibernate-configuration>

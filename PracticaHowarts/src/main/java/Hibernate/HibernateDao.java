@@ -1,7 +1,6 @@
-package data.DAO;
+package Hibernate;
 
-import Util.HibernateUtil;
-
+import data.DAO.Dao;
 import org.hibernate.Session;
 
 import java.util.List;
@@ -66,13 +65,5 @@ public class HibernateDao<T, S> implements Dao<T, S> {
 	public List<T> findAll() {
 	    Session session = HibernateUtil.getSession();
 	    return session.createQuery("from " + classT.getName(), classT).getResultList();
-	}
-
-	@Override
-	public List<T> findByName(String name) {
-	    Session session = HibernateUtil.getSession();
-	    return session.createQuery("from " + classT.getName() + " where name = :name", classT)
-	            .setParameter("name", name)
-	            .getResultList();
 	}
 }

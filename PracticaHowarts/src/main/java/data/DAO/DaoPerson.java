@@ -1,57 +1,32 @@
 package data.DAO;
 
-import Util.HibernateUtil;
-import data.Models.Person;
+import Hibernate.HibernateDao;
+import Hibernate.HibernateUtil;
+import data.POJOS.Person;
+import org.hibernate.Session;
 
 import java.util.List;
 
 /**
  * Autor: Daniel Guirao Coronado
  */
-public class DaoPerson implements Dao<Person, Integer> {
+public class DaoPerson extends HibernateDao<Person, Integer> {
 
-	@Override
-	public void save(Person person) {
-		HibernateUtil.executeTransaction(session -> {
-			session.persist(person);
-			return null;
-		});
+	public DaoPerson() {
+		super(Person.class);
 	}
 
-	@Override
-	public Person read(Integer id) {
-		return HibernateUtil.executeTransaction(session -> session.find(Person.class, id));
-	}
+	/// Métodos adicionales
 
-	@Override
-	public void update(Person person) {
-		HibernateUtil.executeTransaction(session -> {
-			session.merge(person);
-			return null;
-		});
-	}
-
-	@Override
-	public void delete(Integer id) {
-		HibernateUtil.executeTransaction(session -> {
-			Person person = session.find(Person.class, id);
-			if (person != null) {
-				session.remove(person);
-			}
-			return null;
-		});
-	}
-
-	@Override
-	public List<Person> findAll() {
-		return HibernateUtil.executeTransaction(session ->
-				session.createQuery("FROM Person", Person.class).getResultList());
-	}
-
-	@Override
+	/**
+	 * Busca personas por nombre.
+	 *
+	 * @param name el nombre a buscar
+	 * @return una lista de personas que coinciden con el nombre dado
+	 */
 	public List<Person> findByName(String name) {
 		return HibernateUtil.executeTransaction(session ->
-				session.createQuery("FROM Person WHERE firstName = :name OR last_name = :name", Person.class)
+				session.createQuery("FROM Person WHERE first_name = :name OR last_name = :name", Person.class)
 						.setParameter("name", name)
 						.getResultList());
 	}

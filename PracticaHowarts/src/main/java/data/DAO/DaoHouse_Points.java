@@ -1,55 +1,42 @@
 package data.DAO;
 
-import Util.HibernateUtil;
-import data.Models.House_Points;
+import Hibernate.HibernateDao;
+import Hibernate.HibernateUtil;
+import data.POJOS.House_Points;
+import data.POJOS.Person;
 
 import java.util.List;
 
 /**
  * Autor: Daniel Guirao Coronado
  */
-public class DaoHouse_Points implements Dao<House_Points, Integer> {
-	@Override
-	public void save(House_Points housePoints) {
-		HibernateUtil.executeTransaction(session -> {
-			session.persist(housePoints); // session.save(housePoints); <- Deprecado
-					return null;
-		});
+public class DaoHouse_Points extends HibernateDao<House_Points, Integer> {
+
+	public DaoHouse_Points() {
+		super(House_Points.class);
 	}
 
-	@Override
-	public House_Points read(Integer id) {
-		return HibernateUtil.executeTransaction(session -> session.find(House_Points.class, id));
-	}
+	/// Métodos adicionales
 
-	@Override
-	public void update(House_Points housePoints) {
-		HibernateUtil.executeTransaction(session -> {
-			session.merge(housePoints); // session.update(housePoints); <- Deprecado
-					return null;
-		});
-	}
-
-	@Override
-	public void delete(Integer id) {
-		HibernateUtil.executeTransaction(session -> {
-			House_Points housePoints = session.get(House_Points.class, id);
-			if (housePoints != null) {
-				session.remove(housePoints); // session.delete(housePoints); <- Deprecado
-			}
-			return null;
-		});
-	}
-
-	@Override
-	public List<House_Points> findAll() {
+	/**
+	 * Devuelve una lista de personas que son givers.
+	 *
+	 * @return una lista de personas que son givers
+	 */
+	public List<Person> findAllGivers() {
 		return HibernateUtil.executeTransaction(session ->
-				session.createQuery("FROM House_Points", House_Points.class).list());
+				session.createQuery("SELECT DISTINCT hp.giver FROM House_Points hp", Person.class)
+						.getResultList());
 	}
 
-	@Override // No se aplica porque House_Points no tiene un campo "name".
-	public List<House_Points> findByName(String name) {
-		return null;
+	/**
+	 * Devuelve una lista de personas que son receivers.
+	 *
+	 * @return una lista de personas que son receivers
+	 */
+	public List<Person> findAllReceivers() {
+		return HibernateUtil.executeTransaction(session ->
+				session.createQuery("SELECT DISTINCT hp.receiver FROM House_Points hp", Person.class)
+						.getResultList());
 	}
-
 }

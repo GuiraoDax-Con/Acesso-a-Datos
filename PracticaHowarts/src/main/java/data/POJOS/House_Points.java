@@ -1,4 +1,4 @@
-package data.Models;
+package data.POJOS;
 
 import jakarta.persistence.*;
 
