@@ -10,9 +10,9 @@ import java.util.List;
 /**
  * Autor: Daniel Guirao Coronado
  */
-public class DaoHouse_Points extends HibernateDao<House_Points, Integer> {
+public class DaoHousePoints extends HibernateDao<House_Points, Integer> {
 
-	public DaoHouse_Points() {
+	public DaoHousePoints() {
 		super(House_Points.class);
 	}
 

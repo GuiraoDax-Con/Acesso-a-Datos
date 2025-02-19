@@ -7,6 +7,9 @@ import data.POJOS.Person;
 import java.util.List;
 
 public class ServiceHouse {
+	public static final String ANSI_RED = "\u001B[31m"; // Cambiára el color del print a rojo.
+	public static final String ANSI_GREEN = "\u001B[32m"; // Cambiára el color del print a verge.
+	public static final String ANSI_RESET = "\u001B[0m"; // Cambiára el color del print a blanco.
 
 	private final DaoHouse daoHouse;
 
@@ -23,9 +26,9 @@ public class ServiceHouse {
 		House house = daoHouse.read(idHouse);
 		if (house != null && (house.getPersons() == null || house.getPersons().isEmpty())) {
 			daoHouse.delete(idHouse);
-			System.out.println("Casa eliminada correctamente.");
+			System.out.println(ANSI_GREEN + "Casa eliminada correctamente." + ANSI_RESET);
 		} else {
-			System.out.println("No se puede eliminar la casa, hay alumnos matriculados.");
+			System.out.println(ANSI_RED + "No se puede eliminar la casa, hay alumnos matriculados." + ANSI_RESET);
 		}
 	}
 
