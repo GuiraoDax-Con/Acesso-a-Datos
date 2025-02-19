@@ -1,21 +1,39 @@
-//Ejecutar desde MongoDB Compass tras haber seleccionado una base de datos con el comando use miBaseDeDatos;
-db.Jugadores.insertMany([{"_id":1,"nombre":"Magic Johnson","puesto":"Base","estatura":205,"equipo":{"_id":1,"nombre_equipo":"Los Angeles Lakers"}},
-{"_id":2,"nombre":"Byron Scott","puesto":"Escolta","estatura":196,"equipo":{"_id":1,"nombre_equipo":"Los Angeles Lakers"}},
-{"_id":3,"nombre":"James Worthy","puesto":"Alero","estatura":206,"equipo":{"_id":1,"nombre_equipo":"Los Angeles Lakers"}},
-{"_id":4,"nombre":"A. C. Green","puesto":"Ala-Pivot","estatura":206,"equipo":{"_id":1,"nombre_equipo":"Los Angeles Lakers"}},
-{"_id":5,"nombre":"Kareem-Abdul Jabbar","puesto":"Pivot","estatura":218,"equipo":{"_id":1,"nombre_equipo":"Los Angeles Lakers"}},
-{"_id":6,"nombre":"Dennis Johnson","puesto":"Base","estatura":193,"equipo":{"_id":2,"nombre_equipo":"Boston Celtics"}},
-{"_id":7,"nombre":"Danny Ainge","puesto":"Escolta","estatura":193,"equipo":{"_id":2,"nombre_equipo":"Boston Celtics"}},
-{"_id":8,"nombre":"Larry Bird","puesto":"Alero","estatura":205,"equipo":{"_id":2,"nombre_equipo":"Boston Celtics"}},
-{"_id":9,"nombre":"Kevin McHale","puesto":"Ala Pivot","estatura":208,"equipo":{"_id":2,"nombre_equipo":"Boston Celtics"}},
-{"_id":10,"nombre":"Robert Parish","puesto":"Pivot","estatura":213,"equipo":{"_id":2,"nombre_equipo":"Boston Celtics"}},
-{"_id":11,"nombre":"Maurice Cheeks","puesto":"Base","estatura":185,"equipo":{"_id":3,"nombre_equipo":"Philadelphia 76ers"}},
-{"_id":12,"nombre":"Andrew Toney","puesto":"Escolta","estatura":191,"equipo":{"_id":3,"nombre_equipo":"Philadelphia 76ers"}},
-{"_id":13,"nombre":"Julius Erving","puesto":"Alero","estatura":201,"equipo":{"_id":3,"nombre_equipo":"Philadelphia 76ers"}},
-{"_id":14,"nombre":"Bobby Jones","puesto":"Ala Pivot","estatura":206,"equipo":{"_id":3,"nombre_equipo":"Philadelphia 76ers"}},
-{"_id":15,"nombre":"Moses Malone","puesto":"Pivot","estatura":208,"equipo":{"_id":3,"nombre_equipo":"Philadelphia 76ers"}},
-{"_id":16,"nombre":"Allen Leavell","puesto":"Base","estatura":185,"equipo":{"_id":4,"nombre_equipo":"Houston Rockets"}},
-{"_id":17,"nombre":"Rodney McCray","puesto":"Alero","estatura":201,"equipo":{"_id":4,"nombre_equipo":"Houston Rockets"}},
-{"_id":18,"nombre":"Robert Reid","puesto":"Alero","estatura":203,"equipo":{"_id":4,"nombre_equipo":"Houston Rockets"}},
-{"_id":19,"nombre":"Ralph Sampson","puesto":"Ala Pivot","estatura":224,"equipo":{"_id":4,"nombre_equipo":"Houston Rockets"}},
-{"_id":20,"nombre":"Hakeem Olajuwon","puesto":"Pivot","estatura":213,"equipo":{"_id":4,"nombre_equipo":"Houston Rockets"}}])
+//Ejecutar desde MongoDB Compass tras haber seleccionado una base de datos con el comando use miBaseDeDatos;use Baloncesto
+use Baloncesto
+
+db.Equipos.insertMany([
+    {"_id": 1, "nombre_equipo": "Los Angeles Lakers"},
+    {"_id": 2, "nombre_equipo": "Boston Celtics"},
+    {"_id": 3, "nombre_equipo": "Philadelphia 76ers"},
+    {"_id": 4, "nombre_equipo": "Houston Rockets"}
+])
+
+db.Jugadores.insertMany([
+    {"_id": 1, "nombre": "Magic Johnson", "puesto": "Base", "estatura": 205, "equipo_id": 1},
+    {"_id": 2, "nombre": "Byron Scott", "puesto": "Escolta", "estatura": 196, "equipo_id": 1},
+    {"_id": 3, "nombre": "James Worthy", "puesto": "Alero", "estatura": 206, "equipo_id": 1},
+    {"_id": 4, "nombre": "A. C. Green", "puesto": "Ala-Pivot", "estatura": 206, "equipo_id": 1},
+    {"_id": 5, "nombre": "Kareem-Abdul Jabbar", "puesto": "Pivot", "estatura": 218, "equipo_id": 1},
+    {"_id": 6, "nombre": "Dennis Johnson", "puesto": "Base", "estatura": 193, "equipo_id": 2},
+    {"_id": 7, "nombre": "Danny Ainge", "puesto": "Escolta", "estatura": 193, "equipo_id": 2},
+    {"_id": 8, "nombre": "Larry Bird", "puesto": "Alero", "estatura": 205, "equipo_id": 2},
+    {"_id": 9, "nombre": "Kevin McHale", "puesto": "Ala Pivot", "estatura": 208, "equipo_id": 2},
+    {"_id": 10, "nombre": "Robert Parish", "puesto": "Pivot", "estatura": 213, "equipo_id": 2},
+    {"_id": 11, "nombre": "Maurice Cheeks", "puesto": "Base", "estatura": 185, "equipo_id": 3},
+    {"_id": 12, "nombre": "Andrew Toney", "puesto": "Escolta", "estatura": 191, "equipo_id": 3},
+    {"_id": 13, "nombre": "Julius Erving", "puesto": "Alero", "estatura": 201, "equipo_id": 3},
+    {"_id": 14, "nombre": "Bobby Jones", "puesto": "Ala Pivot", "estatura": 206, "equipo_id": 3},
+    {"_id": 15, "nombre": "Moses Malone", "puesto": "Pivot", "estatura": 208, "equipo_id": 3},
+    {"_id": 16, "nombre": "Allen Leavell", "puesto": "Base", "estatura": 185, "equipo_id": 4},
+    {"_id": 17, "nombre": "Rodney McCray", "puesto": "Alero", "estatura": 201, "equipo_id": 4},
+    {"_id": 18, "nombre": "Robert Reid", "puesto": "Alero", "estatura": 203, "equipo_id": 4},
+    {"_id": 19, "nombre": "Ralph Sampson", "puesto": "Ala Pivot", "estatura": 224, "equipo_id": 4},
+    {"_id": 20, "nombre": "Hakeem Olajuwon", "puesto": "Pivot", "estatura": 213, "equipo_id": 4}
+])
+
+
+// Actualizar/remplazar datos/atributos de una tabla
+db.Jugadores.updateMany(
+    { "equipo._id": 4 }, // Busca el atributo "equipo" y dentro de el busca "_id" con valor 4
+    { $set: { "equipo_id": 4 }, $unset: { "equipo": "" } } // Remplaza el atributo "equipo_id" por 4 y elimina el atributo "equipo"
+)
